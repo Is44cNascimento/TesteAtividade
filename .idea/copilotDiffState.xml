@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/README.md" />
+              <option name="updatedContent" value="# Gerenciador de Tarefas (Java + JUnit 5)&#10;&#10;Projeto simples para praticar TDD e testes unitarios com JUnit 5.&#10;&#10;## Estrutura&#10;&#10;- `src/main/java/GerenciadorDeTarefas.java`: classe principal com metodos de negocio.&#10;- `src/main/java/Main.java`: exemplo de execucao no terminal.&#10;- `src/test/java/GerenciadorDeTarefasTest.java`: testes unitarios.&#10;&#10;## Requisitos&#10;&#10;- Java 17+&#10;- Maven 3.9+&#10;&#10;## Como executar os testes&#10;&#10;```bash&#10;mvn test&#10;```&#10;&#10;## Como executar o exemplo principal&#10;&#10;```bash&#10;mvn compile exec:java&#10;```&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
