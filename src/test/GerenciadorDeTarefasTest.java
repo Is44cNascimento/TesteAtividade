@@ -1,5 +1,6 @@
 package test;
 
+import main.GerenciadorDeTarefas;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,20 +21,20 @@ class GerenciadorDeTarefasTest {
 
     @Test
     void deveAdicionarUmaTarefa() {
-        gerenciador.adicionarTarefa("Estudar Collections");
+        gerenciador.adicionarTarefa("JUnit");
 
-        assertTrue(gerenciador.verificarTarefa("Estudar Collections"));
+        assertTrue(gerenciador.verificarTarefa("JUnit"));
         assertEquals(1, gerenciador.listarTarefas().size());
     }
 
     @Test
     void deveRemoverUmaTarefaExistente() {
-        gerenciador.adicionarTarefa("Ler capitulo de testes");
+        gerenciador.adicionarTarefa("Java");
 
-        boolean removeu = gerenciador.removerTarefa("Ler capitulo de testes");
+        boolean removeu = gerenciador.removerTarefa("Java");
 
         assertTrue(removeu);
-        assertFalse(gerenciador.verificarTarefa("Ler capitulo de testes"));
+        assertFalse(gerenciador.verificarTarefa("Java"));
     }
 
     @Test
@@ -48,22 +49,33 @@ class GerenciadorDeTarefasTest {
 
     @Test
     void deveListarTodasAsTarefas() {
-        gerenciador.adicionarTarefa("Estudar POO");
-        gerenciador.adicionarTarefa("Resolver lista de exercicios");
+        gerenciador.adicionarTarefa("B");
+        gerenciador.adicionarTarefa("A");
 
         List<String> tarefas = gerenciador.listarTarefas();
 
         assertEquals(2, tarefas.size());
-        assertEquals("Estudar POO", tarefas.get(0));
-        assertEquals("Resolver lista de exercicios", tarefas.get(1));
+        assertEquals("B", tarefas.get(0));
+        assertEquals("A", tarefas.get(1));
     }
 
     @Test
     void deveVerificarSeUmaTarefaExiste() {
-        gerenciador.adicionarTarefa("Treinar para a prova");
+        gerenciador.adicionarTarefa("Teste");
 
-        assertTrue(gerenciador.verificarTarefa("Treinar para a prova"));
-        assertFalse(gerenciador.verificarTarefa("Fazer compras"));
+        assertTrue(gerenciador.verificarTarefa("Teste"));
+        assertFalse(gerenciador.verificarTarefa("Ucsal"));
+    }
+
+    @Test
+    void deveVerficarSeEstaVazio(){
+        gerenciador.adicionarTarefa("Teste");
+
+        List<String> tarefas = gerenciador.listarTarefas();
+        boolean estaVazio = tarefas.isEmpty();
+
+        assertFalse(estaVazio);
+
     }
 }
 
